@@ -1,0 +1,34 @@
+*Heading
+ \\wsl.localhost\Ubuntu\home\salau\projects\ddm\2Dproblems\pmdl2.inp
+*NODE
+1, -1, 0, 0
+2, -1, 0.1, 0
+3, 0, 0.1, 0
+4, 0, 0, 0
+******* E L E M E N T S *************
+*ELEMENT, type=T3D2, ELSET=Line1
+5, 2, 3
+*ELEMENT, type=T3D2, ELSET=Line2
+6, 3, 4
+*ELEMENT, type=T3D2, ELSET=Line3
+7, 4, 1
+*ELEMENT, type=T3D2, ELSET=Line4
+8, 1, 2
+*ELEMENT, type=CPS4, ELSET=Surface1
+9, 2, 3, 4, 1
+*ELSET,ELSET=bottom_pmdl
+7, 
+*ELSET,ELSET=top_pmdl
+5, 
+*ELSET,ELSET=right_pmdl
+6, 
+*ELSET,ELSET=left_pmdl
+8, 
+*NSET,NSET=bottom_pmdl
+1, 4, 
+*NSET,NSET=top_pmdl
+2, 3, 
+*NSET,NSET=right_pmdl
+3, 4, 
+*NSET,NSET=left_pmdl
+1, 2, 
